@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<link href="~/css/Profil.css" rel="stylesheet">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="content" class="content content-full-width">
+                <!-- begin profile -->
+                <div class="profile">
+                    <div class="profile-header">
+                        <!-- BEGIN profile-header-cover -->
+                        <div class="profile-header-cover"></div>
+                        <!-- END profile-header-cover -->
+                        <!-- BEGIN profile-header-content -->
+                        <div class="profile-header-content">
+                            <!-- BEGIN profile-header-img -->
+                            <div class="profile-header-img">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                            </div>
+                            <!-- END profile-header-img -->
+                            <!-- BEGIN profile-header-info -->
+                            <div class="profile-header-info">
+                                <h4 class="m-t-10 m-b-5">John Doe</h4>
+                                <p class="m-b-10">Creative Kunstner</p>
+                                <a href="#" class="btn btn-sm btn-info mb-2">Edit Profile</a>
+                            </div>
+                            <!-- END profile-header-info -->
+                        </div>
+                        <!-- END profile-header-content -->
+                        <!-- BEGIN profile-header-tab -->
+                        <ul class="profile-header-tab nav nav-tabs">
+                            <li class="nav-item"><a asp-area="" asp-page="/Profile/Forum" class="nav-link_">Forum</a></li>
+                            <li class="nav-item"><a asp-area="" asp-page="/Profile/About" class="nav-link_">Om Mig</a></li>
+                            <li class="nav-item"><a asp-area="" asp-page="/Profile/Gallery" class="nav-link_">Billeder</a></li>
+                        </ul>
+                        <!-- END profile-header-tab -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

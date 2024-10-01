@@ -25,7 +25,12 @@
                             <div class="profile-header-info">
                                 <h4 class="m-t-10 m-b-5">John Doe</h4>
                                 <p class="m-b-10">Creative Kunstner</p>
-                                <a href="#" class="btn btn-sm btn-info mb-2">Edit Profile</a>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="#" class="btn btn-sm btn-info mb-2">Edit Profile</a>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <button type="button" class="btn btn-primary active-toggle" data-bs-toggle="button" aria-pressed="false">Følg</button>
+                                    </div>
+                                </div>
                             </div>
                             <!-- END profile-header-info -->
                         </div>
@@ -43,3 +48,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    // Script to toggle the color when the button is active
+    document.querySelector('.active-toggle').addEventListener('click', function () {
+        this.classList.toggle('btn-primary');
+        this.classList.toggle('btn-secondary');
+    });
+</script>

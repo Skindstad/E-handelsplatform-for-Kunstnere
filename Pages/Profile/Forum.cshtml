@@ -4,17 +4,250 @@
 }
 <partial name="_Profile" />
 
-<!-- Form -->
-<div style="padding-right: 20%; padding-left: 20%;">
-<form class="row g-1">
-    <div class="">
-        <input type="text" class="form-control" id="title" placeholder="Title på din post">
-    </div>
-    <div class="">
-        <textarea class="form-control" id="text" rows="1" placeholder="Text"></textarea>
-    </div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <input type="submit" class="btn btn-primary" value="Post" />
+<style>
+      body {
+      background: linear-gradient(135deg, #ececec 25%, #ffffff 75%);
+      font-family: 'Arial', sans-serif;
+    }
+
+    .left-side {
+      background-color: #f7f3e9; /* Warm pastel background */
+      padding: 50px;
+      min-height: 100vh;
+      border-right: 5px solid #f4f1dc;
+    }
+
+    .right-side {
+      background-color: #fafafa; /* Soft white background */
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .dummy-post {
+      background: #ffe3e3;
+      border: 2px solid #ffacac;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .dummy-post-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #bf3030;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ffacac;
+      padding-bottom: 5px;
+    }
+
+    .post-meta {
+      font-size: 0.9em;
+      color: #6c757d;
+      margin-bottom: 15px;
+    }
+
+    .comment-section {
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #f7f3e9;
+      border: 2px solid #e9dcc9;
+      border-radius: 10px;
+    }
+
+    .comment-section h6 {
+      color: #a65252;
+    }
+
+    .comment-section .comment {
+      border-bottom: 1px solid #e9dcc9;
+      padding: 10px 0;
+      margin-bottom: 10px;
+    }
+
+    .comment-section .comment:last-child {
+      border-bottom: none;
+    }
+
+    .comment-section .comment strong {
+      color: #963939;
+    }
+
+    .btn-outline-primary {
+      border-color: #bf3030;
+      color: #bf3030;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #bf3030;
+      color: #fff;
+    }
+
+    .modal-content {
+      border-radius: 15px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-header {
+      background-color: #ffe3e3;
+      border-bottom: 2px solid #ffacac;
+    }
+
+    .modal-footer {
+      border-top: 2px solid #ffacac;
+    }
+
+    .btn-primary {
+      background-color: #bf3030;
+      border-color: #bf3030;
+    }
+
+    .btn-primary:hover {
+      background-color: #a62a2a;
+      border-color: #a62a2a;
+    }
+</style>
+<div class="container-fluid vh-100">
+    <div class="row h-100">
+        <!-- Left Side (Smaller Section) -->
+        <div class="col-lg-4 col-md-5 col-sm-12 left-side d-flex align-items-center justify-content-center">
+            <div>
+                <h2>Welcome to Our Creative Post Board</h2>
+                <p>Feel free to create posts and engage with other users through comments. Explore the vibrant colors and artistic design!</p>
+            </div>
         </div>
-</form>
+
+        <!-- Right Side (Larger Section) -->
+        <div class="col-lg-8 col-md-7 col-sm-12 right-side">
+            <!-- Full-Width Modal Button at the Top -->
+            <button type="button" class="btn btn-primary btn-lg w-100 mb-4" data-bs-toggle="modal" data-bs-target="#postFormModal">
+                Create Post
+            </button>
+
+            <!-- Dummy Posts Section -->
+            <div id="postsSection">
+                <!-- Dummy Post 1 -->
+                <div class="dummy-post">
+                    <div class="dummy-post-title">Creative Post Title 1</div>
+                    <div class="post-meta">
+                        Posted by <strong>John Doe</strong> on <em>October 1, 2024</em>
+                    </div>
+                    <p>This is a dummy post content showcasing how the post will look once created. Enjoy the creative vibe!</p>
+
+                    <!-- Comment Section for Post 1 -->
+                    <div class="comment-section">
+                        <h6>Comments</h6>
+                        <!-- Example Comment -->
+                        <div class="comment">
+                            <strong>User2</strong> - <em>October 2, 2024</em>
+                            <p>This is a creatively designed comment on the post.</p>
+                        </div>
+                        <div class="comment">
+                            <strong>User3</strong> - <em>October 3, 2024</em>
+                            <p>Another creative comment on the post.</p>
+                        </div>
+                        <!-- Add Comment Button -->
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#commentModal">Reply</button>
+                    </div>
+                </div>
+
+                <!-- Dummy Post 2 -->
+                <div class="dummy-post">
+                    <div class="dummy-post-title">Creative Post Title 2</div>
+                    <div class="post-meta">
+                        Posted by <strong>John Doe</strong> on <em>October 2, 2024</em>
+                    </div>
+                    <p>This is another dummy post. Explore the unique design elements here!</p>
+
+                    <!-- Comment Section for Post 2 -->
+                    <div class="comment-section">
+                        <h6>Comments</h6>
+                        <!-- Example Comment -->
+                        <div class="comment">
+                            <strong>User4</strong> - <em>October 3, 2024</em>
+                            <p>A comment on this post.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#commentModal">Reply</button>
+                    </div>
+                </div>
+
+                <!-- Dummy Post 3 -->
+                <div class="dummy-post">
+                    <div class="dummy-post-title">Creative Post Title 3</div>
+                    <div class="post-meta">
+                        Posted by <strong>John Doe</strong> on <em>October 3, 2024</em>
+                    </div>
+                    <p>Another creative post example. All posts have a similar artistic design.</p>
+
+                    <!-- Comment Section for Post 3 -->
+                    <div class="comment-section">
+                        <h6>Comments</h6>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#commentModal">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Creating a Post -->
+<div class="modal fade" id="postFormModal" tabindex="-1" aria-labelledby="postFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="postFormModalLabel">Create a New Post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="postForm">
+                    <!-- Title Field -->
+                    <div class="mb-3">
+                        <label for="postTitle" class="form-label">Post Title</label>
+                        <input type="text" class="form-control" id="postTitle" placeholder="Enter the title" required>
+                    </div>
+
+                    <!-- Text Field -->
+                    <div class="mb-3">
+                        <label for="postText" class="form-label">Post Text</label>
+                        <textarea class="form-control" id="postText" rows="3" placeholder="Write your post" required></textarea>
+                    </div>
+
+                    <!-- Image/File Upload -->
+                    <div class="mb-3">
+                        <label for="postFile" class="form-label">Upload Image or File (optional)</label>
+                        <input type="file" class="form-control" id="postFile" accept="image/*, .pdf, .doc">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="postForm">Submit Post</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Adding a Comment -->
+<div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="commentModalLabel">Add a Comment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="commentForm">
+                    <!-- Comment Text Field -->
+                    <div class="mb-3">
+                        <label for="commentText" class="form-label">Your Comment</label>
+                        <textarea class="form-control" id="commentText" rows="3" placeholder="Write your comment" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="commentForm">Submit Comment</button>
+            </div>
+        </div>
+    </div>
 </div>

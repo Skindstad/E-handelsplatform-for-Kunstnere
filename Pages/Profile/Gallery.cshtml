@@ -18,9 +18,136 @@
             background-color: #a62a2a;
             border-color: #a62a2a;
         }
+
+    .gallery {
+        padding: 30px 0;
+    }
+
+    .gallery-item {
+        margin-bottom: 30px;
+    }
+
+        .gallery-item img {
+            max-width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    .modal-body {
+        display: flex;
+        flex-direction: row;
+    }
+
+        .modal-body img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .modal-body .description {
+            padding-left: 20px;
+        }
+
+    .comment-section {
+        margin-top: 20px;
+    }
 </style>
 
 
-<div>
-    <p>Dette er gallery</p>
+<div class="container gallery">
+    <div class="row">
+        <!-- Gallery Item 1 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 gallery-item">
+            <img src="https://savethefrogs.com/wp-content/uploads/placeholder-1-2.png" alt="Gallery Image 1" data-bs-toggle="modal" data-bs-target="#imageModal1">
+        </div>
+        <!-- Gallery Item 2 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 gallery-item">
+            <img src="https://savethefrogs.com/wp-content/uploads/placeholder-1-2.png" alt="Gallery Image 2" data-bs-toggle="modal" data-bs-target="#imageModal2">
+        </div>
+        <!-- Gallery Item 3 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 gallery-item">
+            <img src="https://savethefrogs.com/wp-content/uploads/placeholder-1-2.png" alt="Gallery Image 3" data-bs-toggle="modal" data-bs-target="#imageModal3">
+        </div>
+        <!-- Add more gallery items here as needed -->
+    </div>
+</div>
+
+<!-- Modal for Image 1 -->
+<div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModal1Label">Image 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-lg-6">
+                    <img src="https://savethefrogs.com/wp-content/uploads/placeholder-1-2.png" alt="Large Image 1">
+                </div>
+                <div class="col-lg-6 description">
+                    <h5>Description</h5>
+                    <p>This is the description for Image 1. You can provide more details about the image here.</p>
+
+                    <div class="comment-section">
+                        <h6>Comments</h6>
+                        <textarea class="form-control" rows="4" placeholder="Add your comment..."></textarea>
+                        <button class="btn btn-primary mt-2">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Image 2 -->
+<div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModal2Label">Image 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-lg-6">
+                    <img src="https://savethefrogs.com/wp-content/uploads/placeholder-1-2.png" alt="Large Image 2">
+                </div>
+                <div class="col-lg-6 description">
+                    <h5>Description</h5>
+                    <p>This is the description for Image 2. You can provide more details about the image here.</p>
+
+                    <div class="comment-section">
+                        <h6>Comments</h6>
+                        <textarea class="form-control" rows="4" placeholder="Add your comment..."></textarea>
+                        <button class="btn btn-primary mt-2">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Image 3 -->
+<div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModal3Label">Image 3</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-lg-6">
+                    <img src="https://savethefrogs.com/wp-content/uploads/placeholder-1-2.png" alt="Large Image 3">
+                </div>
+                <div class="col-lg-6 description">
+                    <h5>Description</h5>
+                    <p>This is the description for Image 3. You can provide more details about the image here.</p>
+
+                    <div class="comment-section">
+                        <h6>Comments</h6>
+                        <textarea class="form-control" rows="4" placeholder="Add your comment..."></textarea>
+                        <button class="btn btn-primary mt-2">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,141 @@
+﻿body {
+    background-color: #f0f0f5;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Profile Header Styles */
+.profile-header {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+    /* Profile Header Cover spans everything except the <ul> */
+    .profile-header .profile-header-cover {
+        background-image: url('https://bootdey.com/img/Content/bg1.jpg');
+        background-size: cover;
+        background-position: center;
+        height: calc(100% - 40px); /* Covers entire area except the <ul> */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+        .profile-header .profile-header-cover:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+        }
+
+    /* Profile Header Content */
+    .profile-header .profile-header-content {
+        padding: 20px;
+        position: relative;
+        color: #fff;
+        z-index: 10; /* Ensure it's on top of the cover */
+    }
+
+.profile-header-img {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+}
+
+    .profile-header-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.profile-header-info {
+    margin-left: 150px; /* Leaves space for profile image */
+}
+
+    .profile-header-info h4 {
+        font-size: 24px;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+
+    .profile-header-info p {
+        font-size: 16px;
+        color: #ffe3e3; /* Light pink text */
+    }
+
+    .profile-header-info .btn-info {
+        background-color: #bf3030; /* Vibrant red */
+        border-color: #bf3030;
+        color: #fff;
+    }
+
+        .profile-header-info .btn-info:hover {
+            background-color: #a52828;
+            border-color: #a52828;
+        }
+
+/* "Følg" Button Styling */
+.btn-follow {
+    background-color: #ff9900; /* New vibrant color for Følg */
+    border-color: #ff9900;
+    color: #fff;
+}
+
+    .btn-follow:hover {
+        background-color: #cc7a00;
+        border-color: #cc7a00;
+    }
+
+.btn-unfollow {
+    background-color: #ff4d4d; /* Different color for unfollow state */
+    border-color: #ff4d4d;
+    color: #fff;
+}
+
+    .btn-unfollow:hover {
+        background-color: #cc0000;
+        border-color: #cc0000;
+    }
+
+/* Profile Header Tab Styles */
+.profile-header .profile-header-tab {
+    background: #fff;
+    padding-left: 150px; /* Align with profile image */
+    border-radius: 0 0 12px 12px;
+    border-top: 1px solid #f4f1dc;
+    position: relative;
+    z-index: 11; /* Ensure the tabs are above the profile cover */
+}
+
+.profile-header-tab > li {
+    display: inline-block;
+}
+
+    .profile-header-tab > li > a {
+        color: #929ba1;
+        padding: 10px 15px;
+        font-weight: 700;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+        .profile-header-tab > li > a:hover {
+            color: #bf3030; /* Accent hover color */
+        }
+
+        .profile-header-tab > li > a.active {
+            border-bottom: 3px solid #bf3030;
+            color: #bf3030;
+        }

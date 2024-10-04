@@ -4,7 +4,6 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>E_handelsplatform_for_Kunstnere</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

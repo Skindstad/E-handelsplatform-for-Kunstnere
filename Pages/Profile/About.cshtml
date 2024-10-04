@@ -19,8 +19,103 @@
             background-color: #a62a2a;
             border-color: #a62a2a;
         }
+
+    h1, h3 {
+        color: #bf3030;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        margin-top: 50px;
+        color: #bf3030;
+    }
+
+    .info-row {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .info-label {
+        font-weight: bold;
+    }
+
 </style>
 
-<div>
-    <p>Dette er om mig</p>
+<div class="container mt-5">
+    <div class="row">
+        <!-- Introduction Section -->
+        <div class="col-lg-6 mx-auto text-center">
+            <h1 class="mb-4">About Me</h1>
+            <p class="lead">
+                Hi there! I'm John Doe, Creative designer and art lover. Sharing my journey through visuals and experiences. Stay tuned!
+            </p>
+        </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Personal Information Section -->
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h3 class="text-center mb-4">Personal Information</h3>
+
+            <div class="row mb-3 info-row">
+                <div class="col-sm-4">
+                    <p class="info-label">Full Name</p>
+                </div>
+                <div class="col-sm-8">
+                    <p>John Doe</p>
+                </div>
+            </div>
+
+            <div class="row mb-3 info-row">
+                <div class="col-sm-4">
+                    <p class="info-label">Email</p>
+                </div>
+                <div class="col-sm-8">
+                    <p>john.doe@example.com</p>
+                </div>
+            </div>
+
+            <div class="row mb-3 info-row">
+                <div class="col-sm-4">
+                    <p class="info-label">Phone Number</p>
+                </div>
+                <div class="col-sm-8">
+                    <p>+1 234 567 890</p>
+                </div>
+            </div>
+
+            <div class="row mb-3 info-row">
+                <div class="col-sm-4">
+                    <p class="info-label">Address</p>
+                </div>
+                <div class="col-sm-8">
+                    <p>1234 Elm Street, Springfield, IL, USA</p>
+                </div>
+            </div>
+
+            <div class="row mb-3 info-row">
+                <div class="col-sm-4">
+                    <p class="info-label">Age</p>
+                </div>
+                <div class="col-sm-8">
+                    <p>29</p>
+                </div>
+            </div>
+
+            <div class="row mb-3 info-row">
+                <div class="col-sm-4">
+                    <p class="info-label">Birthday</p>
+                </div>
+                <div class="col-sm-8">
+                    <p>January 15, 1995</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

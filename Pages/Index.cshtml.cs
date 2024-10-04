@@ -1,7 +1,8 @@
+using EhandelsplatformforKunstnere.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace E_handelsplatform_for_Kunstnere.Pages
+namespace EhandelsplatformforKunstnere.Pages
 {
     public class IndexModel : PageModel
     {

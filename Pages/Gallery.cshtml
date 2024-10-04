@@ -1,0 +1,35 @@
+@model List<GalleryItem>
+
+<div class="container">
+    @foreach (var item in Model) {
+        <div class="item">
+            <span class="title">
+                @item.Title
+            </span>
+            <div class="img">
+                <img src="@item.ImageUrl" />
+            </div>
+            <div class="line">
+                <span class="artist">
+                    @item.Artist
+                </span>
+                <div class="tags">
+                    @foreach (var tag in item.Tags) {
+                        <span class="tag" style="background-color: @tag.Color">
+                            @tag.Name
+                        </span>
+                    }
+                </div>
+            </div>
+            <p class="desc">
+                @item.Description
+            </p>
+            <span class="stock">
+                @item.AmountInStock left
+            </span>
+            <span class="price">
+                @item.Price DKK
+            </span>
+        </div>
+    }
+</div>

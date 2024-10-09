@@ -11,8 +11,8 @@
     }
 
     .basket-container {
-        background-color: #2c3e50;
-        color: white;
+        background-color: #2c3e50; /* Cool navy blue background */
+        color: white; /* White text for contrast */
         padding: 30px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@
     }
 
     .basket-item {
-        border-bottom: 1px solid #bdc3c7;
+        border-bottom: 1px solid #bdc3c7; /* Light grey border */
         padding: 15px 0;
     }
 
@@ -36,25 +36,25 @@
 
         .basket-item h5 {
             margin: 0 0 5px;
-            color: #ecf0f1;
+            color: #ecf0f1; /* Light grey text */
         }
 
     .basket-total {
         font-size: 1.2rem;
         font-weight: bold;
         text-align: right;
-        color: #ecf0f1;
+        color: #ecf0f1; /* Light grey text */
     }
 
     .btn-checkout {
-        background-color: #f39c12;
+        background-color: #f39c12; /* Bright orange button */
         border: none;
-        color: #333;
+        color: white;
         font-weight: bold;
     }
 
         .btn-checkout:hover {
-            background-color: #e67e22;
+            background-color: #e67e22; /* Darker orange on hover */
         }
 
     .quantity-input {
@@ -64,6 +64,20 @@
         border: 1px solid #ccc;
         text-align: center;
     }
+
+    .btn-delete {
+        background-color: #e74c3c; /* Red delete button */
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .btn-delete:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
 </style>
 
 <div class="container">
@@ -75,7 +89,7 @@
             <div class="col-2">
                 <img src="https://savethefrogs.com/wp-content/uploads/placeholder-1-2.png" alt="Product Image">
             </div>
-            <div class="col-6">
+            <div class="col-4">
                 <h5>Product Name 1</h5>
                 <p>$25.00</p>
             </div>
@@ -85,6 +99,9 @@
             <div class="col-2 text-right">
                 <span>$25.00</span>
             </div>
+            <div class="col-2 text-right">
+                <button class="btn-delete">X</button>
+            </div>
         </div>
 
         <!-- Basket Item -->
@@ -92,7 +109,7 @@
             <div class="col-2">
                 <img src="https://savethefrogs.com/wp-content/uploads/placeholder-1-2.png" alt="Product Image">
             </div>
-            <div class="col-6">
+            <div class="col-4">
                 <h5>Product Name 2</h5>
                 <p>$15.00</p>
             </div>
@@ -101,6 +118,9 @@
             </div>
             <div class="col-2 text-right">
                 <span>$30.00</span>
+            </div>
+            <div class="col-2 text-right">
+                <button class="btn-delete">X</button>
             </div>
         </div>
 

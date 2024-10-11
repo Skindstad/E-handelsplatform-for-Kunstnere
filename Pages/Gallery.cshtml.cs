@@ -1,3 +1,4 @@
+using System.Text.Json;
 using EhandelsplatformforKunstnere.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -23,7 +24,7 @@ namespace EhandelsplatformforKunstnere.Pages
             },
             new () {
                 ImageUrl = "https://cdn.britannica.com/87/2087-004-264616BB/Mona-Lisa-oil-wood-panel-Leonardo-da.jpg",
-                Title = "Item 1",
+                Title = "Billede 123",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 Artist = "Jannick",
                 Price = 9.99m,
@@ -36,7 +37,7 @@ namespace EhandelsplatformforKunstnere.Pages
             },
             new () {
                 ImageUrl = "https://cdn.shopify.com/s/files/1/0369/6522/0411/files/a16fd418-b113-4a17-890b-ed277c0197f8_600x600.jpg?v=1698914599",
-                Title = "Item 1",
+                Title = "Skib",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 Artist = "Jannick",
                 Price = 9.99m,
@@ -100,6 +101,10 @@ namespace EhandelsplatformforKunstnere.Pages
                 ]
             }
         ];
+
+        [BindProperty]
+        public string SearchArray => JsonSerializer.Serialize(Items.Select(static i => i.Title).Distinct());
+
         public void OnGet()
         {
         }
